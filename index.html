@@ -1,381 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Faith Nicole Hancock Memorial Scholarship</title>
+<title>Faith Nicole Hancock Memorial Scholarship</title>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&display=swap"
-        rel="stylesheet"
-    >
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
 
-        html {
-            scroll-behavior: smooth;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        body {
-            background: #fffdf8;
-            color: #594a62;
-            font-family: "Cormorant Garamond", Georgia, serif;
-            line-height: 1.6;
-        }
+body{
+    font-family:'Cormorant Garamond',serif;
+    background:#fffdf9;
+    color:#5c4b68;
+}
 
-        img {
-            max-width: 100%;
-        }
+/* ================= NAV ================= */
 
-        /* Navigation */
+.navbar{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:35px;
+    padding:20px;
+    background:rgba(255,255,255,.95);
+    border-bottom:1px solid #ece4ef;
+}
 
-        .navbar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 28px;
-            min-height: 90px;
-            padding: 12px 25px;
-            background: rgba(255, 253, 248, 0.96);
-            border-bottom: 1px solid #eadfec;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+.navbar a{
+    text-decoration:none;
+    color:#6b5778;
+    font-size:1.2rem;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    font-weight:600;
+}
 
-        .navbar a {
-            color: #594a62;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 1rem;
-            font-weight: 600;
-            letter-spacing: 0.04em;
-        }
+.navbar a:hover{
+    color:#b191c0;
+}
 
-        .navbar a:hover {
-            color: #a47eb2;
-        }
+.nav-logo{
+    width:140px;
+}
 
-        .nav-logo {
-            width: 115px;
-            height: 115px;
-            object-fit: contain;
-        }
+/* ================= HERO ================= */
 
-        /* Hero */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:
+        radial-gradient(circle at left bottom,
+        rgba(218,201,227,.4),transparent 30%),
 
-        .hero {
-            text-align: center;
-            padding: 55px 20px 65px;
-            background:
-                radial-gradient(circle at 10% 85%, rgba(219, 199, 227, 0.35), transparent 28%),
-                radial-gradient(circle at 90% 85%, rgba(219, 199, 227, 0.35), transparent 28%),
-                linear-gradient(to bottom, #fffdf8, #faf5fb);
-            border-bottom: 1px solid #eadfec;
-        }
+        radial-gradient(circle at right bottom,
+        rgba(218,201,227,.4),transparent 30%),
 
-        .hero-logo {
-            width: 225px;
-            height: 225px;
-            object-fit: contain;
-            margin-bottom: 12px;
-        }
+        #fffdf9;
+}
 
-        .hero h1 {
-            color: #574565;
-            font-size: clamp(2.8rem, 6vw, 5rem);
-            line-height: 1.05;
-            font-weight: 600;
-        }
+.hero-logo{
+    width:300px;
+    margin-bottom:15px;
+}
 
-        .hero h2 {
-            color: #725d89;
-            font-family: "Great Vibes", cursive;
-            font-size: clamp(3rem, 6vw, 5.25rem);
-            font-weight: 400;
-            line-height: 1.1;
-            margin-top: 8px;
-        }
+.hero h1{
+    font-size:5rem;
+    color:#5f4d6f;
+    font-weight:600;
+}
 
-        .divider {
-            color: #c9a1d3;
-            font-size: 2rem;
-            margin: 18px 0;
-        }
+.hero h2{
+    font-family:'Great Vibes',cursive;
+    font-size:6rem;
+    color:#8a6ea0;
+    font-weight:normal;
+    line-height:1;
+}
 
-        .hero p {
-            max-width: 820px;
-            margin: 0 auto;
-            color: #5b505e;
-            font-size: 1.35rem;
-        }
+.divider{
+    font-size:2rem;
+    color:#c5a0d2;
+    margin:25px 0;
+}
 
-        /* Gallery */
+.hero p{
+    max-width:900px;
+    margin:auto;
+    font-size:1.7rem;
+    color:#5d5460;
+}
 
-        .gallery-section {
-            padding: 65px 24px 80px;
-            background: #fffdf8;
-        }
+/* ================= GALLERY ================= */
 
-        .gallery-title {
-            color: #574565;
-            text-align: center;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 600;
-            margin-bottom: 40px;
-        }
+.gallery-section{
+    padding:80px 25px;
+}
 
-        .gallery-title::after {
-            content: "♥";
-            display: block;
-            color: #c9a1d3;
-            font-size: 1.5rem;
-            line-height: 1;
-            margin-top: 6px;
-        }
+.gallery-title{
+    text-align:center;
+    font-size:4rem;
+    color:#5f4d6f;
+    margin-bottom:50px;
+}
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 18px;
-            width: 100%;
-            max-width: 1280px;
-            margin: 0 auto;
-            align-items: start;
-        }
+.gallery-title:after{
+    content:"♥";
+    display:block;
+    color:#c6a4d1;
+    font-size:1.6rem;
+}
 
-        .photo-card {
-            background: #ffffff;
-            border: 5px solid #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 6px 18px rgba(74, 57, 78, 0.16);
-            overflow: hidden;
-        }
+.gallery{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
 
-        .photo-card img {
-            display: block;
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
+    gap:22px;
 
-        /* Quote */
+    max-width:1400px;
+    margin:auto;
+}
 
-        .quote-section {
-            position: relative;
-            text-align: center;
-            padding: 85px 20px 100px;
-            background:
-                radial-gradient(circle at 15% 100%, rgba(211, 190, 221, 0.42), transparent 30%),
-                radial-gradient(circle at 85% 100%, rgba(211, 190, 221, 0.42), transparent 30%),
-                #faf6fb;
-            border-top: 1px solid #eadfec;
-        }
+.photo-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
 
-        .quote-heart {
-            color: #c9a1d3;
-            font-size: 2rem;
-            margin-bottom: 22px;
-        }
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.12);
 
-        .quote {
-            max-width: 820px;
-            margin: 0 auto;
-            color: #665270;
-            font-size: clamp(1.7rem, 3vw, 2.5rem);
-            font-style: italic;
-            line-height: 1.35;
-        }
+    transition:.3s;
+}
 
-        /* Tablet */
+.photo-card:hover{
+    transform:translateY(-6px);
+}
 
-        @media (max-width: 1000px) {
-            .gallery {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-            }
+.photo-card img{
+    width:100%;
+    display:block;
+    height:auto;
+}
 
-            .navbar {
-                gap: 18px;
-            }
+/* ================= QUOTE ================= */
 
-            .nav-logo {
-                width: 90px;
-                height: 90px;
-            }
-        }
+.quote-section{
+    text-align:center;
+    padding:90px 20px;
+    background:
+        radial-gradient(circle at left bottom,
+        rgba(218,201,227,.4),transparent 30%),
 
-        /* Mobile */
+        radial-gradient(circle at right bottom,
+        rgba(218,201,227,.4),transparent 30%),
 
-        @media (max-width: 700px) {
-            .navbar {
-                gap: 12px 18px;
-                padding: 14px;
-            }
+        #faf6fb;
+}
 
-            .navbar a {
-                font-size: 0.85rem;
-            }
+.quote-heart{
+    font-size:2rem;
+    color:#c5a0d2;
+    margin-bottom:20px;
+}
 
-            .nav-logo {
-                order: -1;
-                width: 100%;
-                height: 90px;
-            }
+.quote{
+    max-width:900px;
+    margin:auto;
+    font-size:2.5rem;
+    color:#695977;
+    font-style:italic;
+}
 
-            .hero {
-                padding-top: 35px;
-            }
+/* ================= MOBILE ================= */
 
-            .hero-logo {
-                width: 170px;
-                height: 170px;
-            }
+@media(max-width:900px){
 
-            .hero p {
-                font-size: 1.15rem;
-            }
+    .hero h1{
+        font-size:3rem;
+    }
 
-            .gallery {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 12px;
-            }
+    .hero h2{
+        font-size:4rem;
+    }
 
-            .gallery-section {
-                padding-left: 12px;
-                padding-right: 12px;
-            }
-        }
+    .hero-logo{
+        width:220px;
+    }
 
-        @media (max-width: 430px) {
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    .quote{
+        font-size:1.7rem;
+    }
+
+    .gallery-title{
+        font-size:3rem;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <a href="#">Home</a>
-        <a href="#about">About Faith</a>
-        <a href="#scholarship">Scholarship</a>
+<nav class="navbar">
 
-        <img
-            src="FaithLogo.png"
-            class="nav-logo"
-            alt="Faith Nicole Hancock Memorial Scholarship logo"
-        >
+    <a href="#">Home</a>
+    <a href="#">About Faith</a>
+    <a href="#">Scholarship</a>
 
-        <a href="#eligibility">Eligibility</a>
-        <a href="#apply">Apply</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <img src="FaithLogo.png" class="nav-logo">
 
-    <header class="hero" id="about">
+    <a href="#">Eligibility</a>
+    <a href="#">Apply</a>
+    <a href="#">Contact</a>
 
-        <img
-            src="FaithLogo.png"
-            class="hero-logo"
-            alt="Faith Nicole Hancock Memorial Scholarship logo"
-        >
+</nav>
 
-        <h1>Faith Nicole Hancock</h1>
-        <h2>Memorial Scholarship</h2>
 
-        <div class="divider">♥</div>
+<header class="hero">
 
-        <p>
-            Honoring the gentle, loving, and inspiring spirit of Faith.
-            This scholarship supports students who embody the kindness,
-            compassion, and strength that Faith shared with the world.
-        </p>
+    <img src="FaithLogo.png" class="hero-logo">
 
-    </header>
+    <h1>Faith Nicole Hancock</h1>
 
-    <section class="gallery-section">
+    <h2>Memorial Scholarship</h2>
 
-        <h2 class="gallery-title">Photo Gallery</h2>
+    <div class="divider">♥</div>
 
-        <div class="gallery">
+    <p>
+        Honoring the gentle, loving, and inspiring spirit of Faith.
+        This scholarship supports students who embody the kindness,
+        compassion, and strength that Faith shared with the world.
+    </p>
 
-            <div class="photo-card">
-                <img src="Faith%201.JPG" alt="A cherished memory of Faith">
-            </div>
+</header>
 
-            <div class="photo-card">
-                <img src="Faith2.JPG" alt="A cherished memory of Faith">
-            </div>
 
-            <div class="photo-card">
-                <img src="Faith3.JPG" alt="A cherished memory of Faith">
-            </div>
 
-            <div class="photo-card">
-                <img src="Faith4.JPG" alt="A cherished memory of Faith">
-            </div>
+<section class="gallery-section">
 
-            <div class="photo-card">
-                <img src="Faith%205.JPG" alt="A cherished memory of Faith">
-            </div>
+    <h2 class="gallery-title">
+        Photo Gallery
+    </h2>
 
-            <div class="photo-card">
-                <img src="Faith%206.JPG" alt="A cherished memory of Faith">
-            </div>
+    <div class="gallery">
 
-            <div class="photo-card">
-                <img src="Faith7.JPG" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="Faith%208.JPG" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="Faith%209.jpg" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="Faith%2010.JPG" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="Faith%2011.jpg" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="Faith%2012.jpg" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="Faith%2013.jpg" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="Faith%2014.jpg" alt="A cherished memory of Faith">
-            </div>
-
+        <div class="photo-card">
+            <img src="Faith 1.JPG">
         </div>
 
-    </section>
+        <div class="photo-card">
+            <img src="Faith2.JPG">
+        </div>
 
-    <section class="quote-section">
+        <div class="photo-card">
+            <img src="Faith3.JPG">
+        </div>
 
-        <div class="quote-heart">♥</div>
+        <div class="photo-card">
+            <img src="Faith4.JPG">
+        </div>
 
-        <p class="quote">
-            “Those we love never truly leave us. They live on in the kindness
-            they showed and the lives they touched every day.”
-        </p>
+        <div class="photo-card">
+            <img src="Faith 5.JPG">
+        </div>
 
-    </section>
+        <div class="photo-card">
+            <img src="Faith 6.JPG">
+        </div>
+
+        <div class="photo-card">
+            <img src="Faith7.JPG">
+        </div>
+
+        <div class="photo-card">
+            <img src="Faith 8.JPG">
+        </div>
+
+        <div class="photo-card">
+            <img src="Faith 9.jpg">
+        </div>
+
+        <div class="photo-card">
+            <img src="Faith 10.JPG">
+        </div>
+
+        <div class="photo-card">
+            <img src="Faith 11.jpg">
+        </div>
+
+        <div class="photo-card">
+            <img src="Faith 12.jpg">
+        </div>
+
+        <div class="photo-card">
+            <img src="Faith 13.jpg">
+        </div>
+
+        <div class="photo-card">
+            <img src="Faith 14.jpg">
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="quote-section">
+
+    <div class="quote-heart">
+        ♥
+    </div>
+
+    <p class="quote">
+        “Those we love never truly leave us.
+        They live on in the kindness they showed
+        and the lives they touched every day.”
+    </p>
+
+</section>
 
 </body>
 </html>
