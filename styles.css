@@ -202,41 +202,36 @@ textarea {
    PHOTO GALLERY
 ===================================================== */
 
-.gallery-section { 
-  padding: 40px 0 50px; /* Reduced from 100px/115px to compress vertical section space */
-  background: #fbf7fc; 
-  border-top: 1px solid #eee5ef; 
-  border-bottom: 1px solid #eee5ef; 
-} 
-
 .gallery { 
-  display: grid; 
-  grid-template-columns: repeat(4, minmax(0, 1fr)); 
-  align-items: start; 
-  gap: 12px; /* Reduced from 22px to bring columns closer together */
+  column-count: 4; /* Stacks everything into 4 vertical columns */
+  column-gap: 12px; /* Space between the vertical columns */
+  width: 100%;
 } 
 
 .photo-card { 
+  display: inline-block; /* Essential for correct masonry stacking */
+  width: 100%; /* Makes the card fill its column width */
+  break-inside: avoid; /* Stops the card from splitting horizontally */
+  margin-bottom: 12px; /* Space between cards in the same column */
   overflow: hidden; 
-  padding: 4px; /* Reduced from 7px to make the white border thinner */
+  padding: 4px; 
   background: #ffffff; 
-  border-radius: 12px; /* Slightly lowered radius to match the tighter spacing */
-  box-shadow: 0 4px 12px rgba(73, 54, 81, 0.1); /* Softened shadow for tighter spacing */
+  border-radius: 12px; 
+  box-shadow: 0 4px 12px rgba(73, 54, 81, 0.1); 
   transition: transform 0.25s ease, box-shadow 0.25s ease; 
 } 
 
 .photo-card:hover { 
-  transform: translateY(-4px); /* Slightly reduced hover lift */
+  transform: translateY(-4px); 
   box-shadow: 0 8px 20px rgba(73, 54, 81, 0.15); 
 } 
 
 .photo-card img { 
   display: block; 
   width: 100%; 
-  height: auto; 
-  border-radius: 8px; /* Adjusted to fit nicely inside the new 12px card border */
+  height: auto; /* Keeps the uncropped, natural aspect ratio of your photos */
+  border-radius: 8px; 
 }
-
 
 /* =====================================================
    SCHOLARSHIP
