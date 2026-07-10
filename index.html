@@ -2,43 +2,286 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Faith Nicole Hancock Memorial Scholarship</title>
 
-    <link rel="stylesheet" href="styles.css">
-
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap"
         rel="stylesheet"
     >
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #fffdf8;
+            color: #594a62;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        /* HERO */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            padding: 55px 20px 75px;
+            background:
+                radial-gradient(
+                    circle at 5% 85%,
+                    rgba(214, 192, 225, 0.48),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 95% 85%,
+                    rgba(214, 192, 225, 0.48),
+                    transparent 28%
+                ),
+                linear-gradient(
+                    to bottom,
+                    #fffdf8,
+                    #faf5fb
+                );
+            border-bottom: 1px solid #eadfec;
+        }
+
+        .hero::before {
+            content: "🌼";
+            position: absolute;
+            left: 4%;
+            bottom: 25px;
+            font-size: 5rem;
+            opacity: 0.38;
+            transform: rotate(-15deg);
+        }
+
+        .hero::after {
+            content: "🌼";
+            position: absolute;
+            right: 4%;
+            bottom: 25px;
+            font-size: 5rem;
+            opacity: 0.38;
+            transform: rotate(15deg);
+        }
+
+        .hero-logo {
+            display: block;
+            width: 285px;
+            height: auto;
+            margin: 0 auto 20px;
+            object-fit: contain;
+        }
+
+        .hero h1 {
+            color: #594866;
+            font-size: clamp(3.8rem, 7vw, 6.5rem);
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .hero h2 {
+            margin-top: 12px;
+            color: #85699a;
+            font-family: "Great Vibes", cursive;
+            font-size: clamp(4rem, 8vw, 7rem);
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .divider {
+            margin: 25px 0;
+            color: #c39ccf;
+            font-size: 2.2rem;
+        }
+
+        .hero-text {
+            max-width: 950px;
+            margin: 0 auto;
+            color: #5d5260;
+            font-size: clamp(1.4rem, 2.3vw, 1.9rem);
+            line-height: 1.55;
+        }
+
+        /* GALLERY */
+
+        .gallery-section {
+            padding: 75px 24px 90px;
+            background: #fffdf8;
+        }
+
+        .gallery-title {
+            margin-bottom: 45px;
+            color: #5f4d6f;
+            text-align: center;
+            font-size: clamp(3.2rem, 6vw, 5rem);
+            font-weight: 600;
+            line-height: 1.1;
+        }
+
+        .gallery-title::after {
+            content: "♥";
+            display: block;
+            margin-top: 10px;
+            color: #c6a4d1;
+            font-size: 1.7rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            align-items: start;
+            gap: 22px;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .photo-card {
+            overflow: hidden;
+            padding: 7px;
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 7px 20px rgba(70, 52, 78, 0.15);
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(70, 52, 78, 0.2);
+        }
+
+        .photo-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        /* QUOTE */
+
+        .quote-section {
+            position: relative;
+            overflow: hidden;
+            padding: 100px 20px 115px;
+            text-align: center;
+            background:
+                radial-gradient(
+                    circle at 10% 100%,
+                    rgba(216, 196, 226, 0.48),
+                    transparent 32%
+                ),
+                radial-gradient(
+                    circle at 90% 100%,
+                    rgba(216, 196, 226, 0.48),
+                    transparent 32%
+                ),
+                #faf6fb;
+            border-top: 1px solid #eadfec;
+        }
+
+        .quote-section::before {
+            content: "🕊️";
+            position: absolute;
+            left: 8%;
+            bottom: 30px;
+            font-size: 4.5rem;
+            opacity: 0.5;
+        }
+
+        .quote-section::after {
+            content: "🌼";
+            position: absolute;
+            right: 8%;
+            bottom: 30px;
+            font-size: 4.5rem;
+            opacity: 0.42;
+        }
+
+        .quote-heart {
+            margin-bottom: 25px;
+            color: #c39ccf;
+            font-size: 2.2rem;
+        }
+
+        .quote {
+            max-width: 950px;
+            margin: 0 auto;
+            color: #695977;
+            font-size: clamp(2rem, 4vw, 3.25rem);
+            font-style: italic;
+            line-height: 1.35;
+        }
+
+        /* TABLET */
+
+        @media (max-width: 1050px) {
+            .gallery {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 720px) {
+            .hero {
+                padding-top: 35px;
+            }
+
+            .hero-logo {
+                width: 210px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 14px;
+            }
+
+            .gallery-section {
+                padding-left: 13px;
+                padding-right: 13px;
+            }
+
+            .hero::before,
+            .hero::after {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 440px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <nav class="navbar">
-
-        <a href="#">Home</a>
-        <a href="#about">About Faith</a>
-        <a href="#scholarship">Scholarship</a>
+    <header class="hero">
 
         <img
-            src="images/FaithLogo.png"
-            class="nav-logo"
-            alt="Faith Nicole Hancock Memorial Scholarship logo"
-        >
-
-        <a href="#eligibility">Eligibility</a>
-        <a href="#apply">Apply</a>
-        <a href="#contact">Contact</a>
-
-    </nav>
-
-
-    <header class="hero" id="about">
-
-        <img
-            src="images/FaithLogo.png"
+            src="./images/FaithLogo.png"
             class="hero-logo"
             alt="Faith Nicole Hancock Memorial Scholarship logo"
         >
@@ -49,7 +292,7 @@
 
         <div class="divider">♥</div>
 
-        <p>
+        <p class="hero-text">
             Honoring the gentle, loving, and inspiring spirit of Faith.
             This scholarship supports students who embody the kindness,
             compassion, and strength that Faith shared with the world.
@@ -58,83 +301,129 @@
     </header>
 
 
-    <section class="gallery-section">
+    <main>
 
-        <h2 class="gallery-title">Photo Gallery</h2>
+        <section class="gallery-section">
 
-        <div class="gallery">
+            <h2 class="gallery-title">Photo Gallery</h2>
 
-            <div class="photo-card">
-                <img src="images/Faith%201.JPG" alt="A cherished memory of Faith">
+            <div class="gallery">
+
+                <div class="photo-card">
+                    <img
+                        src="./images/Faith%201.JPG"
+                        alt="A cherished memory of Faith"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="./images/Faith2.JPG"
+                        alt="A cherished memory of Faith"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="./images/Faith3.JPG"
+                        alt="A cherished memory of Faith"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="./images/Faith4.JPG"
+                        alt="A cherished memory of Faith"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="./images/Faith%205.JPG"
+                        alt="A cherished memory of Faith"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="./images/Faith%206.JPG"
+                        alt="A cherished memory of Faith"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="./images/Faith7.JPG"
+                        alt="A cherished memory of Faith"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="./images/Faith%208.JPG"
+                        alt="A cherished memory of Faith"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="./images/Faith%209.jpg"
+                        alt="A cherished memory of Faith"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="./images/Faith%2010.JPG"
+                        alt="A cherished memory of Faith"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="./images/Faith%2011.jpg"
+                        alt="A cherished memory of Faith"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="./images/Faith%2012.jpg"
+                        alt="A cherished memory of Faith"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="./images/Faith%2013.jpg"
+                        alt="A cherished memory of Faith"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="./images/Faith%2014.jpg"
+                        alt="A cherished memory of Faith"
+                    >
+                </div>
+
             </div>
 
-            <div class="photo-card">
-                <img src="images/Faith2.JPG" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="images/Faith3.JPG" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="images/Faith4.JPG" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="images/Faith%205.JPG" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="images/Faith%206.JPG" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="images/Faith7.JPG" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="images/Faith%208.JPG" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="images/Faith%209.jpg" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="images/Faith%2010.JPG" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="images/Faith%2011.jpg" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="images/Faith%2012.jpg" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="images/Faith%2013.jpg" alt="A cherished memory of Faith">
-            </div>
-
-            <div class="photo-card">
-                <img src="images/Faith%2014.jpg" alt="A cherished memory of Faith">
-            </div>
-
-        </div>
-
-    </section>
+        </section>
 
 
-    <section class="quote-section">
+        <section class="quote-section">
 
-        <div class="quote-heart">♥</div>
+            <div class="quote-heart">♥</div>
 
-        <p class="quote">
-            “Those we love never truly leave us. They live on in the kindness
-            they showed and the lives they touched every day.”
-        </p>
+            <p class="quote">
+                “Those we love never truly leave us. They live on in the
+                kindness they showed and the lives they touched every day.”
+            </p>
 
-    </section>
+        </section>
+
+    </main>
 
 </body>
 </html>
