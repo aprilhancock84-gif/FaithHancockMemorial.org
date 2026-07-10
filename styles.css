@@ -1,148 +1,30 @@
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    background: #fffafc;
-    color: #4b3d45;
-    line-height: 1.7;
-}
-
-.hero {
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 60px 20px;
-    background:
-        linear-gradient(rgba(92, 61, 76, 0.45), rgba(92, 61, 76, 0.45)),
-        url("images/faith1.jpg") center/cover no-repeat;
-    color: white;
+.logo {
+    width: 250px;
+    max-width: 80%;
+    margin-bottom: 25px;
+    filter: drop-shadow(0px 4px 12px rgba(0,0,0,.25));
 }
 
 .hero-content {
-    max-width: 850px;
-    padding: 35px;
-    background: rgba(71, 45, 58, 0.28);
-    border-radius: 20px;
-    backdrop-filter: blur(3px);
-}
-
-.hero h1 {
-    margin: 0 0 18px;
-    font-size: clamp(2.3rem, 6vw, 4.8rem);
-    line-height: 1.1;
-}
-
-.subtitle {
-    margin: 0;
-    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-}
-
-main {
-    width: 100%;
-}
-
-.section {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 70px 24px;
-}
-
-.section h2 {
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 30px;
-    color: #8f5f72;
-    font-size: clamp(2rem, 4vw, 3rem);
-}
-
-.section p {
-    font-size: 1.08rem;
 }
 
 .main-photo {
+    width: 350px;
+    max-width: 100%;
+    border-radius: 15px;
     display: block;
-    width: min(100%, 420px);
-    margin: 0 auto 35px;
-    border-radius: 24px;
-    box-shadow: 0 12px 35px rgba(90, 55, 71, 0.2);
-}
-
-ul {
-    max-width: 700px;
-    margin: 25px auto;
-    padding-left: 28px;
-}
-
-li {
-    margin-bottom: 12px;
+    margin: 30px auto;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
 }
 
 .gallery img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 18px;
-    box-shadow: 0 8px 24px rgba(90, 55, 71, 0.16);
-    transition: transform 0.25s ease;
+    border-radius: 15px;
 }
-
-.gallery img:hover {
-    transform: translateY(-5px);
-}
-
-.quote {
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 80px;
-}
-
-blockquote {
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 35px;
-    background: #f5e4eb;
-    border-left: 6px solid #b97a93;
-    border-radius: 16px;
-    font-size: 1.35rem;
-    font-style: italic;
-}
-
-footer {
-    text-align: center;
-    padding: 30px 20px;
-    background: #6d4657;
-    color: white;
-}
-
-@media (max-width: 600px) {
-    .hero {
-        min-height: 60vh;
-    }
-
-    .hero-content {
-        padding: 24px;
-    }
-
-    .section {
-        padding: 50px 18px;
-    }
-
-    .gallery img {
-        height: 260px;
-    }
 }
