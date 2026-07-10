@@ -364,121 +364,233 @@ textarea {
 }
 
 
-/* =====================================================
-   MEMORIES
-===================================================== */
+/* ===== SHARE A MEMORY ===== */
 
 .memories-section {
-    padding: 105px 0;
-    background: #faf6fb;
-    border-top: 1px solid #e9dfeb;
-    border-bottom: 1px solid #e9dfeb;
+    background: #f8f3fa;
+    padding: 100px 25px;
+    text-align: center;
+}
+
+.memories-section .section-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
 }
 
 .memory-intro {
-    max-width: 930px;
-    margin: -5px auto 45px;
-    color: #5d535f;
-    font-size: 1.45rem;
-    line-height: 1.7;
+    max-width: 800px;
+    margin: 20px auto 50px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #6f5b77;
     text-align: center;
 }
 
 .memory-layout {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
     gap: 35px;
     align-items: stretch;
-    max-width: 1150px;
+    width: 100%;
     margin: 0 auto;
 }
 
-.memory-message,
-.memory-form {
-    padding: 45px 38px;
-    background: #ffffff;
-    border: 1px solid #e4d8e7;
-    border-radius: 24px;
-    box-shadow: 0 9px 27px rgba(73, 54, 81, 0.11);
-}
+
+/* LEFT MEMORY MESSAGE */
 
 .memory-message {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        145deg,
+        #f0e6f4,
+        #fffdf9
+    );
+
+    border: 1px solid #e2d5e7;
+    border-radius: 28px;
+    padding: 55px 40px;
+
+    box-shadow:
+        0 15px 35px rgba(92, 68, 104, 0.10);
+
     text-align: center;
 }
 
-.dove {
-    margin-bottom: 10px;
-    font-size: 4rem;
+.memory-symbol {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
 }
 
 .memory-message h3 {
-    margin-bottom: 18px;
-    color: #604e6d;
-    font-size: 2.6rem;
-    line-height: 1.1;
+    margin: 0 0 20px;
+    color: #65506f;
+    font-size: 2.2rem;
+    font-weight: 600;
 }
 
 .memory-message p {
-    color: #5d535f;
-    font-size: 1.3rem;
-    line-height: 1.65;
+    margin: 0;
+    color: #705e77;
+    font-size: 1.15rem;
+    line-height: 1.8;
 }
 
 .memory-message blockquote {
-    margin-top: 28px;
-    padding-top: 25px;
-    color: #786581;
-    border-top: 1px solid #e6dae9;
-    font-size: 1.45rem;
+    margin: 30px 0 20px;
+    padding: 25px 20px;
+
+    border-top: 1px solid #cfb8d7;
+    border-bottom: 1px solid #cfb8d7;
+
+    color: #765e81;
+    font-size: 1.2rem;
     font-style: italic;
-    line-height: 1.5;
+    line-height: 1.7;
 }
 
-.form-group + .form-group {
-    margin-top: 22px;
+.memory-flowers {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+
+/* MEMORY FORM */
+
+.memory-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    width: 100%;
+    margin: 0;
+
+    background: #ffffff;
+    padding: 45px;
+    border: 1px solid #e1d5e5;
+    border-radius: 28px;
+
+    box-shadow:
+        0 15px 35px rgba(92, 68, 104, 0.10);
+
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: #604e6d;
-    font-size: 1.25rem;
-    font-weight: 700;
+    margin-bottom: 9px;
+    color: #614c6a;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
-.form-group input,
-.form-group textarea {
+.memory-form input,
+.memory-form textarea {
     width: 100%;
-    padding: 14px 16px;
-    color: #554b59;
-    background: #fdfbfe;
-    border: 1px solid #cfbdd5;
-    border-radius: 12px;
+    padding: 16px 18px;
+
+    border: 1px solid #d9cbdc;
+    border-radius: 14px;
+
+    background: #fcf9fd;
+    color: #5d4a66;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+
     outline: none;
-    font-size: 1.15rem;
     transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
 }
 
-.form-group textarea {
-    min-height: 190px;
+.memory-form input:focus,
+.memory-form textarea:focus {
+    background: #ffffff;
+    border-color: #9a77aa;
+
+    box-shadow:
+        0 0 0 4px rgba(154, 119, 170, 0.14);
+}
+
+.memory-form textarea {
+    min-height: 210px;
     resize: vertical;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #9f7bac;
-    box-shadow: 0 0 0 4px rgba(159, 123, 172, 0.14);
+.memory-form input::placeholder,
+.memory-form textarea::placeholder {
+    color: #a291a8;
 }
 
-.form-button {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
+.memory-button {
+    align-self: center;
+    min-width: 220px;
+    margin-top: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.memory-fine-print {
+    max-width: 500px;
+    margin: 0 auto;
+
+    color: #8b7a91;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .memories-section {
+        padding: 75px 18px;
+    }
+
+    .memory-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .memory-message,
+    .memory-form {
+        padding: 35px 25px;
+    }
+
+    .memory-message h3 {
+        font-size: 1.9rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .memory-form {
+        padding: 28px 18px;
+    }
+
+    .memory-message {
+        padding: 35px 20px;
+    }
+
+    .memory-button {
+        width: 100%;
+        min-width: 0;
+    }
+
 }
 
 
