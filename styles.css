@@ -202,41 +202,39 @@ textarea {
    PHOTO GALLERY
 ===================================================== */
 
-.gallery-section {
-    padding: 100px 0 115px;
-    background: #fbf7fc;
-    border-top: 1px solid #eee5ef;
-    border-bottom: 1px solid #eee5ef;
-}
+.gallery-section { 
+  padding: 40px 0 50px; /* Reduced from 100px/115px to compress vertical section space */
+  background: #fbf7fc; 
+  border-top: 1px solid #eee5ef; 
+  border-bottom: 1px solid #eee5ef; 
+} 
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    align-items: start;
-    gap: 22px;
-}
+.gallery { 
+  display: grid; 
+  grid-template-columns: repeat(4, minmax(0, 1fr)); 
+  align-items: start; 
+  gap: 12px; /* Reduced from 22px to bring columns closer together */
+} 
 
-.photo-card {
-    overflow: hidden;
-    padding: 7px;
-    background: #ffffff;
-    border-radius: 18px;
-    box-shadow: 0 8px 22px rgba(73, 54, 81, 0.15);
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
+.photo-card { 
+  overflow: hidden; 
+  padding: 4px; /* Reduced from 7px to make the white border thinner */
+  background: #ffffff; 
+  border-radius: 12px; /* Slightly lowered radius to match the tighter spacing */
+  box-shadow: 0 4px 12px rgba(73, 54, 81, 0.1); /* Softened shadow for tighter spacing */
+  transition: transform 0.25s ease, box-shadow 0.25s ease; 
+} 
 
-.photo-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 32px rgba(73, 54, 81, 0.2);
-}
+.photo-card:hover { 
+  transform: translateY(-4px); /* Slightly reduced hover lift */
+  box-shadow: 0 8px 20px rgba(73, 54, 81, 0.15); 
+} 
 
-.photo-card img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
+.photo-card img { 
+  display: block; 
+  width: 100%; 
+  height: auto; 
+  border-radius: 8px; /* Adjusted to fit nicely inside the new 12px card border */
 }
 
 
