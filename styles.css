@@ -822,3 +822,24 @@ select {
   }
 
 }
+.donate-section {
+    text-align: center;
+}
+
+.donate-note {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.paypal-button {
+    margin-top: 30px;
+}
+
+.paypal-button img {
+    transition: transform 0.3s ease;
+}
+
+.paypal-button img:hover {
+    transform: scale(1.05);
+}
