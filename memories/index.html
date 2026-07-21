@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Shared memories and photos of Faith Nicole Hancock." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shared memories, stories, and photos of Faith Nicole Hancock.">
   <title>Memories of Faith | Faith Nicole Hancock Memorial</title>
 
   <style>
@@ -234,31 +234,34 @@
       margin-bottom: 0;
     }
 
-    .submission-wrap {
-      display: grid;
-      grid-template-columns: 1fr 1.15fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    .submission-info,
-    .submission-form {
-      background: rgba(255, 255, 255, 0.92);
+    .quote-box {
+      margin: 20px 0 0;
+      padding: 30px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.9);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: clamp(24px, 4vw, 38px);
       border: 1px solid rgba(185, 101, 122, 0.12);
     }
 
-    .submission-info h2,
-    .submission-form h2 {
-      margin-top: 0;
+    .quote-box blockquote {
+      margin: 0;
       color: var(--deep-rose);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 2rem;
+      font-size: clamp(1.5rem, 3vw, 2.3rem);
+      font-style: italic;
+    }
+
+    .form-card {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(18px, 3vw, 34px);
+      border: 1px solid rgba(185, 101, 122, 0.12);
     }
 
     .note {
+      margin-bottom: 22px;
       padding: 14px 16px;
       border-left: 4px solid var(--gold);
       background: #fff8e8;
@@ -266,54 +269,13 @@
       font-size: 0.95rem;
     }
 
-    form {
-      display: grid;
-      gap: 16px;
-    }
-
-    label {
-      display: grid;
-      gap: 7px;
-      font-weight: 700;
-      color: var(--deep-rose);
-    }
-
-    input,
-    textarea {
+    iframe {
+      display: block;
       width: 100%;
-      padding: 13px 14px;
-      border: 1px solid #d8c9cd;
-      border-radius: 12px;
-      background: var(--white);
-      font: inherit;
-      color: var(--text);
-    }
-
-    input:focus,
-    textarea:focus {
-      outline: 3px solid rgba(185, 101, 122, 0.15);
-      border-color: var(--rose);
-    }
-
-    textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-
-    .preview {
-      display: none;
-      margin-top: 6px;
+      min-height: 1700px;
+      border: 0;
       border-radius: 16px;
-      max-width: 100%;
-      max-height: 360px;
-      object-fit: contain;
-      border: 1px solid #e5dadd;
-      background: #fafafa;
-    }
-
-    .form-message {
-      min-height: 24px;
-      font-size: 0.95rem;
+      background: white;
     }
 
     .back-home {
@@ -335,12 +297,12 @@
         flex-direction: column;
       }
 
-      .submission-wrap {
-        grid-template-columns: 1fr;
-      }
-
       .hero {
         min-height: auto;
+      }
+
+      iframe {
+        min-height: 1900px;
       }
     }
   </style>
@@ -360,10 +322,13 @@
   <section class="hero">
     <div class="hero-inner">
       <span class="eyebrow">A place to remember</span>
+
       <h1>Memories of Faith</h1>
+
       <p>
-        Stories, photographs, laughter, and love shared by the people whose lives
-        Faith touched. Scroll through the memories below, or add one of your own.
+        Stories, photographs, laughter, and love shared by the people whose
+        lives Faith touched. Scroll through the memories below, or share one
+        of your own.
       </p>
 
       <div class="hero-actions">
@@ -374,33 +339,44 @@
   </section>
 
   <main>
+
     <section class="section" id="memories">
       <div class="section-heading">
         <h2>Cherished Moments</h2>
         <p>
-          Replace the sample entries below with Faith's real photos and stories.
-          You can add as many memory cards as you would like.
+          These stories and photographs help keep Faith's beautiful spirit
+          present for everyone who loved her.
         </p>
       </div>
 
       <div class="memory-grid">
+
         <article class="memory-card">
-          <img src="../images/Faith1.JPG" alt="A cherished photo of Faith" />
+          <img src="../images/Faith%201.JPG"
+               alt="A cherished photo of Faith"
+               loading="lazy">
+
           <div class="memory-content">
             <h3>Her Beautiful Smile</h3>
             <p class="memory-meta">Shared by Family</p>
+
             <p>
-              Faith had a way of bringing warmth into a room. Her smile, humor,
-              and love for the people around her will never be forgotten.
+              Faith had a way of bringing warmth into a room. Her smile,
+              humor, and love for the people around her will never be
+              forgotten.
             </p>
           </div>
         </article>
 
         <article class="memory-card">
-          <img src="../images/Faith2.JPG" alt="Faith sharing a happy moment" />
+          <img src="../images/Faith2.JPG"
+               alt="Faith sharing a happy moment"
+               loading="lazy">
+
           <div class="memory-content">
             <h3>A Joyful Memory</h3>
             <p class="memory-meta">Shared by Someone Who Loved Her</p>
+
             <p>
               Add a favorite story here—a funny moment, a special trip, or a
               small kindness that perfectly captures who Faith was.
@@ -409,150 +385,77 @@
         </article>
 
         <article class="memory-card">
-          <img src="../images/Faith3.JPG" alt="A special memory of Faith" />
+          <img src="../images/Faith3.JPG"
+               alt="A special memory of Faith"
+               loading="lazy">
+
           <div class="memory-content">
             <h3>Forever Loved</h3>
             <p class="memory-meta">Shared by Friends and Family</p>
+
             <p>
-              Every shared memory helps keep Faith's spirit present and allows
-              others to know the love and light she brought into the world.
+              Every shared memory helps others know the love and light Faith
+              brought into the world.
             </p>
           </div>
         </article>
+
+      </div>
+
+      <div class="quote-box">
+        <div style="font-size:42px; margin-bottom:12px;">🌼 🕊️ 🌼</div>
+
+        <blockquote>
+          “Please be the Faith that guides me.”
+        </blockquote>
       </div>
     </section>
+
 
     <section class="section" id="share">
-      <div class="submission-wrap">
-        <div class="submission-info">
-          <h2>Share a Memory</h2>
-          <p>
-            Visitors can submit a story and choose a photograph to accompany it.
-            Submissions should be reviewed before they are added publicly.
-          </p>
+      <div class="section-heading">
+        <h2>Share a Memory</h2>
 
-          <div class="note">
-            <strong>Important:</strong> GitHub Pages is a static website, so it
-            cannot permanently receive or store uploads by itself. This form is
-            ready to connect to a form service, Google Form, or other upload
-            system. Until that connection is added, the selected photo will only
-            preview on the visitor's screen.
-          </div>
+        <p>
+          Friends and family are invited to share stories, photographs, and
+          special memories of Faith. Every submission will be reviewed before
+          it is added publicly.
+        </p>
+      </div>
+
+      <div class="form-card">
+        <div class="note">
+          Memories and photos submitted through this form will remain private
+          until they are reviewed. A Google account may be required to upload
+          a photograph.
         </div>
 
-        <!--
-          TO ENABLE REAL SUBMISSIONS:
-          Replace YOUR_FORM_ENDPOINT below with the endpoint supplied by your
-          chosen form service. Confirm that the service supports file uploads.
-        -->
-        <div class="submission-form">
-          <h2>Submit Your Story</h2>
-
-          <form id="memoryForm" action="YOUR_FORM_ENDPOINT" method="POST" enctype="multipart/form-data">
-            <label>
-              Your name
-              <input type="text" name="name" autocomplete="name" required />
-            </label>
-
-            <label>
-              Your email
-              <input type="email" name="email" autocomplete="email" required />
-            </label>
-
-            <label>
-              Title for your memory
-              <input type="text" name="memory_title" maxlength="100" required />
-            </label>
-
-            <label>
-              Your memory of Faith
-              <textarea name="memory_text" required></textarea>
-            </label>
-
-            <label>
-              Add a photo
-              <input
-                id="photoInput"
-                type="file"
-                name="photo"
-                accept="image/png,image/jpeg,image/webp"
-              />
-            </label>
-
-            <img id="photoPreview" class="preview" alt="Selected photo preview" />
-
-            <label>
-              <input type="checkbox" name="permission" value="yes" required />
-              I give permission for this memory and photo to be reviewed and
-              published on the memorial website.
-            </label>
-
-            <button class="button button-primary" type="submit">
-              Submit Memory
-            </button>
-
-            <div id="formMessage" class="form-message" aria-live="polite"></div>
-          </form>
-        </div>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdoODIY-z6vzgeyLo7vtlaaeZKLOOBAPlOXkwXfOVQtNG4Ziw/viewform?embedded=true"
+          title="Share a memory of Faith"
+          loading="lazy">
+          Loading…
+        </iframe>
       </div>
     </section>
+
 
     <div class="back-home">
       <a class="button button-secondary" href="../index.html">
         Return to the Main Memorial Site
       </a>
     </div>
+
   </main>
 
   <footer>
     <p>
-      Made with love in memory of Faith Nicole Hancock.
+      Faith Nicole Hancock Memorial Scholarship
+    </p>
+
+    <p>
+      Made with love in memory of Faith.
     </p>
   </footer>
-
-  <script>
-    const photoInput = document.getElementById("photoInput");
-    const photoPreview = document.getElementById("photoPreview");
-    const memoryForm = document.getElementById("memoryForm");
-    const formMessage = document.getElementById("formMessage");
-
-    photoInput.addEventListener("change", () => {
-      const file = photoInput.files && photoInput.files[0];
-
-      if (!file) {
-        photoPreview.removeAttribute("src");
-        photoPreview.style.display = "none";
-        return;
-      }
-
-      if (!file.type.startsWith("image/")) {
-        formMessage.textContent = "Please choose an image file.";
-        photoInput.value = "";
-        return;
-      }
-
-      if (file.size > 8 * 1024 * 1024) {
-        formMessage.textContent = "Please choose an image smaller than 8 MB.";
-        photoInput.value = "";
-        return;
-      }
-
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        photoPreview.src = event.target.result;
-        photoPreview.style.display = "block";
-        formMessage.textContent = "";
-      };
-      reader.readAsDataURL(file);
-    });
-
-    memoryForm.addEventListener("submit", (event) => {
-      if (memoryForm.action.includes("YOUR_FORM_ENDPOINT")) {
-        event.preventDefault();
-        formMessage.textContent =
-          "The page is ready, but a submission service still needs to be connected before memories can be sent.";
-      }
-    });
-  </script>
 </body>
 </html>
